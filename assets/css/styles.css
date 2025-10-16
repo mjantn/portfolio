@@ -239,3 +239,29 @@ footer a {
   color: var(--color-accent);
   font-weight: 600;
 }
+
+/* --- Lucide Icons --- */
+.lucide {
+  width: 20px;
+  height: 20px;
+  stroke: #4F46E5; /* your accent color */
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.project-card h3 svg {
+  margin-right: 6px;
+}
+
+footer svg {
+  width: 16px;
+  height: 16px;
+  stroke: #4F46E5;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+h2 svg {
+  margin-right: 6px;
+  vertical-align: middle;
+}
