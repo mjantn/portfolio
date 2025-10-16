@@ -39,8 +39,10 @@ a {
 
 a:hover {
   background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;  /* Chrome, Safari, Opera */
+  -webkit-text-fill-color: transparent;  /* Chrome, Safari, Opera */
+  background-clip: text;  /* Standard property */
+  color: transparent;  /* Fallback for browsers that support background-clip but not -webkit-text-fill-color */
 }
 
 /* =============================
