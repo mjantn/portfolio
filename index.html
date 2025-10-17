@@ -48,7 +48,7 @@
 </section>
 
   <!-- Projects -->
-  <section class="section" id="projects">
+  <section class="section fullscreen-section" id="projects">
     <h2>Documentation & Publications</h2>
     <div class="projects-grid">
       <div class="project-card highlight">
@@ -108,10 +108,15 @@
         <svg data-lucide="file-text"></svg> View PDF
       </a>
     </div>
+    <div class="scroll-indicator">
+  <span>Scroll to explore</span>
+  <svg data-lucide="chevron-down"></svg>
+</div>
+
   </section>
  
   <!-- Social Media -->
-  <section class="section" id="social-media">
+  <section class="section fullscreen-section" id="social-media">
     <h2>Social Media Highlights</h2>
 
     <div class="projects-grid">
@@ -129,18 +134,31 @@
        Explore more campaigns <svg data-lucide="external-link"></svg>
       </a>
     </p>
+    <div class="scroll-indicator">
+  <span>Scroll to explore</span>
+  <svg data-lucide="chevron-down"></svg>
+</div>
+
   </section>
 
   <!-- Video -->
-  <section class="section" id="videos">
-    <h2>Video</h2>
-    <div class="project-card">
-      <p>Documentary and advocacy video that combines research, scripting, and post-production storytelling.</p>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/wkJ5oEQRxjs?si=lBRfg843fOJepjlY" title="Portfolio Video" allowfullscreen></iframe>
-      </div>
+  <section class="section fullscreen-section video-feature" id="videos">
+  <div class="video-content fade-in">
+    <h2>🎥 Featured Video</h2>
+    <p class="video-description">
+      A short documentary and advocacy piece that combines research, scripting, and post-production storytelling.
+    </p>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/wkJ5oEQRxjs?si=lBRfg843fOJepjlY"
+        title="Portfolio Video"
+        allowfullscreen
+      ></iframe>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- Footer -->
   <footer>
@@ -192,6 +210,13 @@
   })();
 </script>
 
+<script>
+  document.querySelector('.cta').addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
 
 </body>
 </html>

@@ -415,6 +415,9 @@ h2 svg {
     padding: 60px 6%;
   }
 }
+.section, .fullscreen-section {
+  position: relative;
+}
 
 @media (max-width: 480px) {
   .hero {
@@ -490,4 +493,190 @@ h2 svg {
 
 .mini-card a:hover {
   color: var(--color-accent-hover);
+}
+/* Full-page sections */
+.fullscreen-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  background: linear-gradient(135deg, #f9f9ff, #f3f3fb);
+}
+
+/* Optional: add subtle fade-in effect */
+.fullscreen-section.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fullscreen-section.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  animation: fadeBounce 2.5s infinite;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.scroll-indicator svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+@keyframes fadeBounce {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.7; }
+  50% { transform: translate(-50%, 8px); opacity: 1; }
+}
+/* =======================
+   VIDEO FEATURE SECTION
+   ======================= */
+.video-feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f8ff, #f1f1f8);
+  padding: 100px 10%;
+  min-height: 100vh;
+}
+
+.video-feature h2 {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.video-feature .video-description {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.video-feature .video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(79, 70, 229, 0.15);
+  background: #000;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-feature .video-wrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 18px 50px rgba(79, 70, 229, 0.25);
+}
+
+.video-feature iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  left: 0;
+  top: 0;
+}
+/* =======================
+   SOCIAL MEDIA SECTION
+   ======================= */
+#social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f8ff, #f1f1f8);
+  padding: 100px 10%;
+  position: relative;
+}
+
+#social-media h2 {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.social-description {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 1.5rem;
+}
+
+.social-grid .project-card {
+  background: var(--color-card);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 320px;
+}
+
+.social-grid .project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15);
+}
+
+.social-grid img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* “Scroll to explore” indicator */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.scroll-indicator svg {
+  width: 20px;
+  height: 20px;
+  animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(5px); }
+  60% { transform: translateY(3px); }
 }
