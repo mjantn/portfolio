@@ -95,8 +95,8 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 85vh;
-  padding: 6rem 10%;
+  min-height: 100vh;
+  padding: 0 10%;
   background: radial-gradient(circle at 80% 20%, rgba(79,70,229,0.06) 0%, transparent 25%),
               radial-gradient(circle at 10% 90%, rgba(255,200,0,0.06) 0%, transparent 25%),
               linear-gradient(135deg, #fbfbff, #f7f6fc 60%);
